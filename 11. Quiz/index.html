@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CtM - JavaScript Training</title>
+
+        <link href="styles/bootstrap.min.css" rel="stylesheet">
+        <link href="styles/layout.css" rel="stylesheet">
+
+
+    </head>
+    <body>
+
+        <div class="container">
+
+            <div class="page-header">
+                <h1>Compare the Market Tech: JavaScript skills test</h1>
+                <p class="lead">
+                    The following test aims to test your knowledge of the resources you've studied to date.
+                    The questions will test you on some of the trickier areas that you've covered.
+                </p>
+            </div>
+
+            <div class="question">
+                <h3>Q1</h3>
+                <p class="text-warning">What is the result of this code?</p>
+                <hr>
+                <figure class="highlight">
+                    <pre>
+                        <code class="language-html" data-lang="html">
+var a = 1;
+
+function example() {
+    console.log(a);
+    var a = 2;
+}
+
+example();
+                        </code>
+                    </pre>
+                </figure>
+
+                <form method="post" id="formq1">
+                    <div class="row">
+
+                        <div class="col-lg-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <input type="radio" name="q1" id="q1a1" value="1" />
+                                </span>
+                                <span class="form-control">1</span>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <input type="radio" name="q1" id="q1a2" value="2" />
+                                </span>
+                                <span class="form-control">2</span>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <input type="radio" name="q1" id="q1a3" value="undefined" />
+                                </span>
+                                <span class="form-control">undefined</span>
+                            </div>
+                        </div>
+
+                        <div style="text-align: right;">
+                            <input type="submit" class="btn btn-primary" value="Submit" />
+                        </div>
+                    </div>
+
+                    <div class="answers">
+                        <div class="alert alert-success" role="alert" id="q1correct">
+                            Correct. Because the variable a is defined inside the scope of 'example' it is
+                            hoisted to the top of the function, but not assigned a value before it is reference.
+                        </div>
+                        <div class="alert alert-danger" role="alert" id="q1incorrect">
+                            Incorrect. It's 'undefined'. The variable a is defined inside the scope of 'example' it is
+                            hoisted to the top of the function, but not assigned a value before it is reference.
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="question">
+                <h3>Q2</h3>
+                <p class="text-warning">What is being logged here?</p>
+                <hr>
+                <figure class="highlight">
+                    <pre>
+                        <code class="language-html" data-lang="html">
+function example() {
+    var myVar = 'hello';
+}
+
+example();
+
+console.log(myVar);
+                        </code>
+                    </pre>
+                </figure>
+
+                <form method="post" id="formq2">
+                    <div class="row">
+
+                        <div class="col-lg-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <input type="radio" name="q2" id="q2a1" value="hello" />
+                                </span>
+                                <span class="form-control">hello</span>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <input type="radio" name="q2" id="q2a2" value="undefined" />
+                                </span>
+                                <span class="form-control">undefined</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="text-align: right;">
+                        <input type="submit" class="btn btn-primary" value="Submit" />
+                    </div>
+                </form>
+
+                <div class="answers">
+                    <div class="alert alert-success" role="alert" id="q2correct">
+                        Correct. The value for 'myVar' only exists in the scope of 'example'.
+                    </div>
+                    <div class="alert alert-danger" role="alert" id="q2incorrect">
+                        Incorrect. 'myVar' only exists in the scope of 'example'.
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="question">
+                <h3>Q3</h3>
+                <p class="text-warning">What is being logged here?</p>
+                <hr>
+                <figure class="highlight">
+                    <pre>
+                        <code class="language-html" data-lang="html">
+var myVar = 'hello';
+
+function example() {
+    myVar = 'goodbye';
+}
+
+example();
+
+console.log(myVar);
+                        </code>
+                    </pre>
+                </figure>
+
+                <form method="post" id="formq3">
+                    <div class="row">
+                        <!--<div class="col-lg-6">
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1">Answer</span>
+                                <input type="text" class="form-control" placeholder="answer" id="q3" name="q3">
+                            </div>
+                        </div>-->
+
+                        <div class="col-lg-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <input type="radio" name="q3" id="q3a1" value="hello" />
+                                </span>
+                                <span class="form-control">hello</span>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <input type="radio" name="q3" id="q3a2" value="goodbye" />
+                                </span>
+                                <span class="form-control">goodbye</span>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <input type="radio" name="q3" id="q3a3" value="hellogoodbye" />
+                                </span>
+                                <span class="form-control">hellogoodbye</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="text-align: right;">
+                        <input type="submit" class="btn btn-primary" value="Submit" />
+                    </div>
+                </form>
+
+                <div class="answers">
+                    <div class="alert alert-success" role="alert" id="q3correct">
+                        Correct. Because the value is defined in the global scope, it can be accessed and
+                        updated in the local scope. This updates the global value.
+                    </div>
+                    <div class="alert alert-danger" role="alert" id="q3incorrect">
+                        Incorrect. The value assignment in the local scope is replacing value of the global variable.
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+        <footer class="footer">
+            <div class="container">
+                <p>
+                    CtM Tech
+                </p>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="scripts/test-controller.js"></script>
+    </body>
+</html>
